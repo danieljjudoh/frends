@@ -9,6 +9,7 @@ This project is a social web app where users post their stories.
 5. created usersModel.js and postsModel.js files inside the models folder
 6. created authRouter.js
 7. created authController.js for auth logics
+8. Created validator.js in the middlewares folder
 
 ### Index.js
 1. imported the necessary dependencies
@@ -37,3 +38,7 @@ This project is a social web app where users post their stories.
 ### authController.js
 1. exported signup logic function
 2. 
+
+### validator.js
+1. imported joi
+2. created and exported schema for data validation
