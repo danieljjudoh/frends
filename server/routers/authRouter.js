@@ -9,5 +9,8 @@ const router = express.Router()
 
 // public pathways
 router.post('/signup', authController.signup);
+router.post('/signin', authController.signin);
+router.post('/signout', authController.signout);
+router.patch('/send-email-verification', authController.sendVerificationCode);
 
 module.exports = router;
