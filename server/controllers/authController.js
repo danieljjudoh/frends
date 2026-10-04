@@ -32,6 +32,7 @@ exports.signup = async (req, res) => {
       .json({
         success: true,
         message: "Your account has been created successfully!",
+        result
       });
   } catch (error) {
     console.log(error);
