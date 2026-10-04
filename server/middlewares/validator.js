@@ -32,3 +32,15 @@ exports.signinSchema = joi.object({
     .required()
     .pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/),
 });
+
+exports.acceptCodeSchema = joi.object({
+  email: joi
+    .string()
+    .min(10)
+    .max(60)
+    .required()
+    .email({
+      tlds: { allow: ["com", "net"] },
+    }),
+  providedCode: joi.number().required(),
+});

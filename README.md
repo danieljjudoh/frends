@@ -11,6 +11,7 @@ This project is a social web app where users post their stories.
 7. created authController.js for auth logics
 8. Created validator.js and sendMail.js in the middlewares folder
 9. created hashing.js in the utils folder
+10. created identification.js to make sure users logged in are identified
 
 ### Index.js
 1. imported the necessary dependencies
@@ -41,7 +42,7 @@ This project is a social web app where users post their stories.
 
 ### authController.js
 1. imported jwt for token generation
-2. imported the email and password checkers from validator.js and transport from sendMail.js
+2. imported the input validators from validator.js and transport from sendMail.js
 3. imported the user model from models/usersModel.js
 4. imported the doHash, doHashValidation and hmacProcess functions from utils/hashing.js
 5. exported signup logic function which is first validated in the try block
@@ -55,12 +56,14 @@ This project is a social web app where users post their stories.
 13. exported the email verification logic.
 14. checking if user exist or user already verified before creating and sending the codeValue
 15. if code was sent, store the hashed value in the database
+16. exported the function that verifies that the user inputed code tallies with database
 
 ### validator.js
 1. imported joi
 2. created and exported schema for data validation
 3. The object checks the email and password for specific properties
 4. copied the signupSchema for signinSchema
+5. created and exported the email verification code schema
 
 ### hashing.js
 1. import hash and compare as objects from bcryptjs
