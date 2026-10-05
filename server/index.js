@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 
 // importing routers
 const authRouter = require('./routers/authRouter');
+const postRouter = require('./routers/postRouter');
 
 // Initialising an instance of express
 const app = express();
@@ -28,7 +29,8 @@ mongoose.connect(process.env.MONGO_URI)
     })
 
 // custom middlewares
-app.use('/api/auth', authRouter)
+app.use('/api/auth', authRouter);
+app.use('/api/posts', postRouter);
 
 // Render the homepage
 app.get('/', (req,res) => {

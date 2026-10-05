@@ -12,6 +12,7 @@ This project is a social web app where users post their stories.
 8. Created validator.js and sendMail.js in the middlewares folder
 9. created hashing.js in the utils folder
 10. created identification.js to make sure users logged in are identified
+11. created postRouter.js and postController.js for post logic
 
 ### Index.js
 1. imported the necessary dependencies
