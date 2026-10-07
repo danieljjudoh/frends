@@ -12,10 +12,10 @@ const router = express.Router()
 
 // public pathways
 router.get('/all-posts', identifier, postController.getPosts);
-router.get('/single-post', identifier, postController.signin);
-router.post('/create-post', identifier, postController.signout);
+router.get('/single-post', identifier, postController.singlePost);
+router.post('/create-post', identifier, postController.createPost);
 
-router.put('/update-post', identifier, postController.sendVerificationCode);
-router.delete('/delete-post', identifier, postController.verifyVerificationCode);
+router.put('/update-post', identifier, postController.updatePost);
+router.delete('/delete-post', identifier, postController.deletePost);
 
 module.exports = router;

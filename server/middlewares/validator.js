@@ -70,4 +70,20 @@ exports.acceptFPCodeSchema = joi.object({
     .string()
     .required()
     .pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/),
-})
+});
+
+exports.createPostSchema = joi.object({
+  title: joi
+    .string()
+    .min(1)
+    .max(60)
+    .required(),
+  description: joi
+    .string()
+    .min(1)
+    .max(600)
+    .required(),
+  userId: joi
+    .string()
+    .required(),
+});
