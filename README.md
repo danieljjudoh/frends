@@ -13,7 +13,7 @@ To ensure the application is stable and easy to debug, complete the development 
 
 Before writing any code, initialize your project and create your directory structure to match this clean architectural pattern:
 
-"""
+```
 ├── config/
 │   └── db.js
 ├── controllers/
@@ -34,7 +34,7 @@ Before writing any code, initialize your project and create your directory struc
 ├── .env
 ├── package.json
 └── server.js
-"""
+```
 
 
 ## 🛠️ Phase 1: Environment Setup & Core Configuration
@@ -46,7 +46,7 @@ Goal: Initialize the runtime workspace, install your tools, and get a basic serv
 	• Development: npm i -D nodemon
 3. Environment Workspace (.env): Create a .env file at the root. Populate it with your local configurations:
 
-"""
+```
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/your_db_name
 TOKEN_SECRET=your_super_long_jwt_secret_key
@@ -54,7 +54,7 @@ HMAC_VERIFICATION_CODE_SECRET=your_hmac_secret_key
 NODE_CODE_SENDING_EMAIL_ADDRESS=your_gmail_address@gmail.com
 NODE_CODE_SENDING_EMAIL_PASSWORD=your_16_character_google_app_password
 NODE_ENV=development
-"""
+```
 
 4. Configure Base Entry (server.js): Implement your main entry comments (Step 1 through Step 4, and Step 7 & 8). Launch the app using nodemon server.js and verify it boots up without errors on your configured port.
 
